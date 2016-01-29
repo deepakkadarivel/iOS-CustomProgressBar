@@ -16,12 +16,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5U-ZJ-9Ok" customClass="ProgressView" customModule="CustomProgressBar" customModuleProvider="target">
+                                <rect key="frame" x="35" y="159" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="SeI-At-VeJ"/>
+                                    <constraint firstAttribute="height" constant="250" id="iEl-jE-6Mp"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIT-KD-VdR">
+                                <rect key="frame" x="0.0" y="530" width="320" height="30"/>
+                                <state key="normal" title="Animate Progress View"/>
+                                <connections>
+                                    <action selector="animateProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5QF-Ek-jf4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zL-V5-f5w">
+                                <rect key="frame" x="0.0" y="492" width="320" height="30"/>
+                                <state key="normal" title="Hide Progress View"/>
+                                <connections>
+                                    <action selector="hideProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDF-tQ-mIP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gIT-KD-VdR" secondAttribute="bottom" constant="8" id="8cs-rp-TAi"/>
+                            <constraint firstItem="8zL-V5-f5w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MEg-pz-jhA"/>
+                            <constraint firstItem="T5U-ZJ-9Ok" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tha-bC-5LX"/>
+                            <constraint firstAttribute="trailing" secondItem="8zL-V5-f5w" secondAttribute="trailing" id="cs2-vd-26e"/>
+                            <constraint firstItem="T5U-ZJ-9Ok" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gGy-5t-lui"/>
+                            <constraint firstItem="gIT-KD-VdR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kub-xm-O1a"/>
+                            <constraint firstItem="gIT-KD-VdR" firstAttribute="top" secondItem="8zL-V5-f5w" secondAttribute="bottom" constant="8" id="ngI-mq-RVz"/>
+                            <constraint firstAttribute="trailing" secondItem="gIT-KD-VdR" secondAttribute="trailing" id="ob8-qk-6Gv"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="progressView" destination="T5U-ZJ-9Ok" id="p79-vj-unD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="243" y="327"/>
         </scene>
     </scenes>
 </document>
