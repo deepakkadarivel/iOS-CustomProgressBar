@@ -46,8 +46,6 @@ class ProgressView: UIView {
         let endAngle = CGFloat(M_PI * 2 + M_PI_2)
         let centerPoint = CGPointMake(CGRectGetWidth(frame)/2, CGRectGetHeight(frame)/2)
         
-        print("startAngle: \(startAngle)  endAngle: \(endAngle)  centerPoint: \(centerPoint)")
-        
         let gradientMaskLayer = gradientMask()
         progressLayer.path = UIBezierPath(arcCenter: centerPoint, radius: CGRectGetWidth(frame)/2 - 30.0, startAngle: startAngle, endAngle: endAngle, clockwise: true).CGPath
         progressLayer.backgroundColor = UIColor.clearColor().CGColor
