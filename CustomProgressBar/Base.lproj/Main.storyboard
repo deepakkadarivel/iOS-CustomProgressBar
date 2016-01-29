@@ -27,14 +27,18 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIT-KD-VdR">
                                 <rect key="frame" x="0.0" y="530" width="320" height="30"/>
-                                <state key="normal" title="Animate Progress View"/>
+                                <state key="normal" title="Animate Progress View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="animateProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5QF-Ek-jf4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zL-V5-f5w">
                                 <rect key="frame" x="0.0" y="492" width="320" height="30"/>
-                                <state key="normal" title="Hide Progress View"/>
+                                <state key="normal" title="Hide Progress View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="hideProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDF-tQ-mIP"/>
                                 </connections>
